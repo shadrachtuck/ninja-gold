@@ -1,20 +1,56 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    
+    <title>Ninja Gold</title>
+  </head>  
+    <div style="text-align:center">
+        <div class="container wrapper">
+          <div class="jumbotron jumbotron-fluid">
+            <img src="./assets/img/ninja-big.gif">
+            <div class="container">
+              <h1 class="display-4">{{ title }}</h1>
+            </div>
+          </div>
+          
+          <img id="coin" src="./assets/img/goldcoin.gif">
+          <h3>Your gold: {{total}}</h3>
+              <div class="cards">   
+              <div class="card card text-center" style="width: 18rem;">
+                  <img src="./assets/img/farm.gif">
+                  <div class="card-body">
+                      <h5 class="card-title">Farm</h5>
+                      <p class="card-text">Ninjas are rescourceful! Work at the farm and sell crops at the market?</p>
+                      <button class="btn btn-outline-dark" (click)="
+                      farm()">Farm!</button>
+                  </div>
+              </div>
+              <div class="card card text-center" style="width: 18rem;">
+                  <img src="./assets/img/cave.gif">
+                  <div class="card-body">
+                      <h5 class="card-title">Cave</h5>
+                      <p class="card-text">Ninjas are daring! Test your skills and loot some caves? Be careful, you never know where an enemy may hide!</p>
+                      <button class="btn btn-outline-dark" (click)="
+                      cave()">Explore the Cave!</button>
+                  </div>
+              </div>
+              <div class="card card text-center" style="width: 18rem;">
+                  <img src="./assets/img/house.gif">
+                  <div class="card-body">
+                      <h5 class="card-title">House</h5>
+                      <p class="card-text">Ninjas are stealthy! Sneak into enemy home to loot? Careful, not all enemies sleep with both eyes closed!</p>
+                      <button class="btn btn-outline-dark" (click)="
+                      house()">Sneak into a house!</button>
+                  </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                  <img src="./assets/img/casino.gif">
+                  <div class="card-body">
+                      <h5 class="card-title">Casino</h5>
+                      <p class="card-text">Cash out! Ninja's need to blow off steam after a long days work. Besides, what good is all this gold if you can't spend it?</p>
+                      <button class="btn btn-outline-dark" (click)="
+                      casino()">Test your luck!</button>
+                  </div>
+              </div>
+          </div>
+          <button class="btn btn-outline-dark" (click)="reset()">Reset Game</button>
+      </div>
